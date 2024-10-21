@@ -9,44 +9,54 @@
 // 5. 기타 (위에 언급되지 않은 나머지 속성들, 폰트의 관련 속성 이후에 선언하며, 기타 속성 내의 선언 순서는 무관함)
 
 //layout
-.container{
-    .section{
+.container {
+    .section {
         // padding: var(--content-padding-x);
         max-width: var(--content-width);
         margin: 0 auto;
+
+        .title {
+            font-family: var(--font-family-en);
+            font-weight: 500;
+            font-size: var(--font-xlarge);
+            color: var(--color-black);
+            letter-spacing: 1rem;
+            margin-bottom: 6rem;
+        }
     }
 }
 
-.header{
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
     max-width: var(--content-width);
     height: 10rem;
-    .logo{
+
+    .logo {
         background-color: var(--color-gray-5);
         width: 7.4rem;
         height: 4rem;
         text-align: center;
-        transform:rotate(-5deg);
-        a{
-            // @include font(--font-family-en);
-            font-family: var(--font-family-en);
-            font-weight: bold;
+        transform: rotate(-5deg);
+
+        a {
+            @include font('$font-en', 'abril-fatface', 'woff', 400);
             font-size: var(--font-large);
             color: var(--color-gray-0);
-    
+
         }
     }
-    .nav-wrap{   
+
+    .nav-wrap {
         display: flex;
-        li{
+
+        li {
             margin-left: 6rem;
-            a{
-                // @include font($family: --font-family-en);
-                font-family: var(--font-family-en);
-                font-weight: bold;
+
+            a {
+                @include font('Abril Fatface', 'abril-fatface', 'woff', 400);
                 font-size: 2.8rem;
                 color: var(--color-black);
             }
@@ -54,37 +64,127 @@
     }
 }
 
-.section.visual{
+.section.visual {
     position: relative;
     height: 78.4rem;
-    .title-wrap{
+
+    .title-wrap {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        .title{
-            font-family: var(--font-family-en-2);
-            font-size: var(--font-xlarge);
-            font-weight: Light;
-            color: var(--color-black);
+
+        .title {
+            p {
+                font-family: var(--font-family-en-2);
+                font-weight: 300;
+                letter-spacing: normal;
+            }
         }
-        .desc{
-            margin-top: 6rem;
+
+        .desc {
             font-family: var(--font-family-ko);
             font-size: var(--font-small);
         }
     }
-    .img-wrap{
+
+    .img-wrap {
         position: absolute;
         width: 58.8rem;
         height: 78.4rem;
         right: 0;
         @include bg('title-img.png');
-        img{
+
+        img {
             position: absolute;
             bottom: 16.8rem;
             right: 49.8rem;
             width: 18rem;
             height: 18rem;
+        }
+    }
+}
+
+.section.skills {
+    padding: 15rem 0;
+
+    .skills-list {
+        display: flex;
+        flex-wrap: wrap;
+
+        li {
+            padding: 1.2rem 3rem;
+            border-radius: 5rem;
+            border: 1px solid #bbb;
+            margin: 0 2.4rem 2.4rem 0;
+
+            a {
+                font-family: var(--font-family-en-2);
+                font-size: var(--font-large);
+            }
+        }
+    }
+}
+
+.section.project {
+    padding: 15rem 0;
+
+}
+
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.porject-swiper .swiper-slide {
+    flex-shrink: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 58rem;
+    height: 74rem;
+    object-fit: cover;
+}
+
+.swiper-slide {
+    width: 80%;
+}
+
+.swiper-slide:nth-child(2n) {
+    width: 60%;
+}
+
+.swiper-slide:nth-child(3n) {
+    width: 40%;
+}
+
+
+.porject-swiper {
+    .text-wrap {
+        padding: 3rem 0;
+        width: 100%;
+        .tit {
+            margin-bottom: 2rem;
+            font-family: var(--font-family-ko);
+            font-size: var(--font-large);
+            font-weight: 700;
+            color: var(--color-black);
+        }
+        .desc{
+            margin-bottom: 3rem;
+            font-size: var(--font-small);
+        }
+        .more{
+            font-family: var(--font-family-en-2);
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--color-black);
+            letter-spacing: .2rem;
         }
     }
 }
