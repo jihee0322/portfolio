@@ -1,0 +1,73 @@
+.container .section {
+  max-width: var(--content-width);
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  max-width: var(--content-width);
+  height: 10rem;
+}
+.header .logo {
+  background-color: var(--color-gray-5);
+  width: 7.4rem;
+  height: 4rem;
+  text-align: center;
+  transform: rotate(-5deg);
+}
+.header .logo a {
+  font-family: var(--font-family-en);
+  font-weight: bold;
+  font-size: var(--font-large);
+  color: var(--color-gray-0);
+}
+.header .nav-wrap {
+  display: flex;
+}
+.header .nav-wrap li {
+  margin-left: 6rem;
+}
+.header .nav-wrap li a {
+  font-family: var(--font-family-en);
+  font-weight: bold;
+  font-size: 2.8rem;
+  color: var(--color-black);
+}
+
+.section.visual {
+  position: relative;
+  height: 78.4rem;
+}
+.section.visual .title-wrap {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.section.visual .title-wrap .title {
+  font-family: var(--font-family-en-2);
+  font-size: var(--font-xlarge);
+  font-weight: Light;
+  color: var(--color-black);
+}
+.section.visual .title-wrap .desc {
+  margin-top: 6rem;
+  font-family: var(--font-family-ko);
+  font-size: var(--font-small);
+}
+.section.visual .img-wrap {
+  position: absolute;
+  width: 58.8rem;
+  height: 78.4rem;
+  right: 0;
+  background: url(../img/title-img.png) no-repeat center/cover;
+}
+.section.visual .img-wrap img {
+  position: absolute;
+  bottom: 16.8rem;
+  right: 49.8rem;
+  width: 18rem;
+  height: 18rem;
+}

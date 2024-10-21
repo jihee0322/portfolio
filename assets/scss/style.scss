@@ -1,0 +1,90 @@
+@charset "UTF-8";
+@import "./util";
+
+//css 속성 선언 순서
+// 1. 레이아웃  (overflow, display, position, top, right, bottom, left, z-index)
+// 2. box (margin, padding, width, height, border)
+// 3. 배경 (background)
+// 4. 폰트 (font, color, letter-spacing, text-align, text-decoration, text-indent, vertical-align, white-space)
+// 5. 기타 (위에 언급되지 않은 나머지 속성들, 폰트의 관련 속성 이후에 선언하며, 기타 속성 내의 선언 순서는 무관함)
+
+//layout
+.container{
+    .section{
+        // padding: var(--content-padding-x);
+        max-width: var(--content-width);
+        margin: 0 auto;
+    }
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    max-width: var(--content-width);
+    height: 10rem;
+    .logo{
+        background-color: var(--color-gray-5);
+        width: 7.4rem;
+        height: 4rem;
+        text-align: center;
+        transform:rotate(-5deg);
+        a{
+            // @include font(--font-family-en);
+            font-family: var(--font-family-en);
+            font-weight: bold;
+            font-size: var(--font-large);
+            color: var(--color-gray-0);
+    
+        }
+    }
+    .nav-wrap{   
+        display: flex;
+        li{
+            margin-left: 6rem;
+            a{
+                // @include font($family: --font-family-en);
+                font-family: var(--font-family-en);
+                font-weight: bold;
+                font-size: 2.8rem;
+                color: var(--color-black);
+            }
+        }
+    }
+}
+
+.section.visual{
+    position: relative;
+    height: 78.4rem;
+    .title-wrap{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        .title{
+            font-family: var(--font-family-en-2);
+            font-size: var(--font-xlarge);
+            font-weight: Light;
+            color: var(--color-black);
+        }
+        .desc{
+            margin-top: 6rem;
+            font-family: var(--font-family-ko);
+            font-size: var(--font-small);
+        }
+    }
+    .img-wrap{
+        position: absolute;
+        width: 58.8rem;
+        height: 78.4rem;
+        right: 0;
+        @include bg('title-img.png');
+        img{
+            position: absolute;
+            bottom: 16.8rem;
+            right: 49.8rem;
+            width: 18rem;
+            height: 18rem;
+        }
+    }
+}

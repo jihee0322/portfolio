@@ -1,0 +1,88 @@
+@charset "UTF-8";
+
+:root {
+    //default 변수
+    //color
+    --color-gray-0: #fff;
+    --color-gray-1: #f8f8f8;
+    --color-gray-2: #bbb;
+    --color-gray-3: #999;
+    --color-gray-4: #666;
+    --color-gray-5: #222;
+
+    //font-size
+    --font-small: 1.6rem;
+    --font-medium: 2rem;
+    --font-large: 3.2rem;
+    --font-xlarge: 8rem;
+    --font-xxlarge: 12rem;
+
+    //line-height
+    --base-line-height: 1.4;
+
+    //letter-spacing
+    --base-letter-spacing: 0.025rem;
+
+    //font
+    --font-family-en: 'Abril Fatface';
+    --font-family-en-2: 'Montserrat';
+    --font-family-ko: 'Noto Sans KR';
+
+    //용도에 따른 값
+    --color-black: var(--color-gray-5);
+    --color-white: var(--color-gray-0);
+
+    //text-color
+    --color-text-bolder: var(--color-black);
+    --color-text-basic: var(--color-gray-4);
+    --color-text-light: var(--color-gray-3);
+    --color-text-white: var(--color-white);
+
+    //border-color
+    --color-border-basic: var(--color-gray-2);
+
+    //bg-color
+    --color-bg-white: var(--color-white);
+    --color-bg-gray: var(--color-gray-1);
+    --color-bg-gray-dark: var(--color-gray-5);
+
+    //text
+    --text-title-large: var(--font-xxlarge);
+    --text-title-medium: var(--font-xlarge);
+    --text-title-small: var(--font-large);
+
+    --text-body-large: var(--font-large);
+    --text-body-medium: var(--font-medium);
+    --text-body-small: var(--font-small);
+
+    --text-body-default: 10px;
+    --text-body-default-mo: 20px;
+
+    //layout-gap
+    --gap-title-large-desc: 6rem;
+    --gap-title-medium-cont: 6rem;
+
+    --card-list-gap: 4rem;
+    --card-list-category-pos: 2rem;
+    --card-list--txt-padding-y: 3rem;
+    --card-list-gap-title-desc: 2rem;
+    --card-list-gap-desc-btn: 3rem;
+
+    --tag-list-gap: 2.4rem;
+
+    //section
+    --section-padding-x: 20rem;
+
+    //content
+    --content-width: 144rem;
+    --content-padding-x: 2.8rem;
+    --content-padding-x-mo: 1.6rem;
+
+    //breakpoint
+    --breakpoint-mobile-small: 360px;
+    --breakpoint-mobile-medium: 600px;
+    --breakpoint-mobile-large: 768px;
+    --breakpoint-tablet: 1024px;
+    --breakpoint-tablet-large: 1280px;
+    --breakpoint-pc: 1920px;
+}

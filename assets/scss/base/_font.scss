@@ -1,0 +1,37 @@
+@charset "UTF-8";
+@import "../util";
+
+$fonts-style-ko: (Regular: 400, Medium: 500, Bold: 700);
+$fonts-style-en: (Regular: 400);
+$fonts-style-en2: (Light: 300, Regular: 400, Medium: 500, Bold: 700);
+
+$font-ko: 'Noto Sans KR';
+$font-en: 'Abril Fatface';
+$font-en2: 'Montserrat';
+
+@each $font, $weight in $fonts-style-ko{
+	$font-family: $font-ko;
+	$font-name: remove-whitespace($font-family)+"-"+$font;
+    @font-face{
+        @include font("#{$font-family}", "#{$font-name}", 'woff', $weight);
+        font-style: normal;
+    }
+}
+
+@each $font, $weight in $fonts-style-en{
+	$font-family: $font-en;
+	$font-name: remove-whitespace($font-family)+"-"+$font;
+    @font-face{
+        @include font("#{$font-family}", "#{$font-name}", 'woff', $weight);
+        font-style: normal;
+    }
+}
+
+@each $font, $weight in $fonts-style-en2{
+    $font-family: $font-en2;
+	$font-name: remove-whitespace($font-family)+"-"+$font;
+    @font-face{
+        @include font("#{$font-family}", "#{$font-name}", 'woff', $weight);
+        font-style: normal;
+    }
+}

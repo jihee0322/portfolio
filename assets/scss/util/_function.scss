@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+//문자열에 공백 제거
+@function remove-whitespace($string) {
+    $output: "";
+    $length: str-length($string);
+
+    @for $i from 1 through $length {
+        $char: str-slice($string, $i, $i);
+        @if $char != " " {
+            $output: #{$output}#{$char};
+        }
+    }
+    @return $output;
+}
