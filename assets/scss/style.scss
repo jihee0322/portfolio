@@ -65,6 +65,8 @@
     }
 }
 
+
+/* seciton - visual */
 .section.visual {
     position: relative;
     height: 78.4rem;
@@ -73,6 +75,8 @@
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
+        width: 50%;
+        word-break: keep-all;
 
         .title {
             p {
@@ -83,8 +87,8 @@
         }
 
         .desc {
-            font-family: var(--font-family-ko);
-            font-size: var(--font-small);
+            font-size: var(--font-medium);
+            padding-right: 3rem;
         }
     }
 
@@ -95,13 +99,24 @@
         right: 0;
         @include bg('title-img.png');
 
-        img {
+        .img-box {
             position: absolute;
             bottom: 16.8rem;
-            right: 49.8rem;
-            width: 18rem;
-            height: 18rem;
-            animation: rotate 10s linear infinite;
+            right: calc(100% - 9rem);
+            .one{
+                position: relative;
+                width: 18rem;
+                height: 18rem;
+                animation: rotate 10s linear infinite;
+            }
+            .arrow{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 1.6rem;
+                height: 6.2rem;
+            }
         }
     }
 }
@@ -119,27 +134,30 @@
     }
 }
 
+/* seciton - skills */
 .section.skills {
     .skills-list {
         display: flex;
         flex-wrap: wrap;
+        gap: 2.4rem;
 
         li {
             padding: 1.2rem 3rem;
             border-radius: 5rem;
             border: 1px solid #bbb;
-            margin: 0 2.4rem 2.4rem 0;
             font-family: var(--font-family-en-2);
             font-size: var(--font-large);
             &:hover{
                background-color: var(--color-gray-5);
                color: var(--color-gray-0); 
                border-color:  var(--color-gray-5);
+               transition: all 0.5s;
             }
         }
     }
 }
 
+/* seciton - project */
 .section.project {
     padding: 15rem 0 0;
     max-width: initial;
@@ -149,63 +167,55 @@
         max-width: var(--content-width);
         margin: 0 auto;
         .porject-swiper{
-            padding: 0;
-            position: absolute;
-            left: 0;
-            width: calc(100% + 24rem);
+            // padding: 0;
+            // position: absolute;
+            // left: 0;
+            // width: calc(100% + 24rem);
             height: auto;
-            // padding-left: 24rem;
-            .swiper-pagination{
-                display: none;
+            .swiper-wrapper{
+                padding-bottom: 6rem;
+                .swiper-pagination{
+                    position: absolute;
+                    bottom: 0;
+                }
             }
         }
     }
 }
-
 
 .swiper {
     width: 100%;
     height: 100%;
 }
 
-.porject-swiper .swiper-slide {
-    flex-shrink: 1;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-}
-
-.swiper-slide img {
-    display: block;
-    width: 58rem;
-    height: 74rem;
-    object-fit: cover;
-}
-
-// .swiper-slide {
-//     width: 80%;
-// }
-
-// .swiper-slide:nth-child(2n) {
-//     width: 60%;
-// }
-
-// .swiper-slide:nth-child(3n) {
-//     width: 40%;
-// }
-
-
 .porject-swiper {
+    .swiper-slide {
+        flex-shrink: 1;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        .img-wrap {
+            width: 58rem;
+            height: 74rem;
+            background-repeat: no-repeat;
+            background-position: top;
+            background-size: cover;
+            position: relative;
+            transition: all .5s 0s;
+            cursor: pointer;
+            background-color:#DEE1E6;
+        }
+    }
+
     .text-wrap {
         padding: 3rem 0 0;
         width: 100%;
         .tit {
             margin-bottom: 2rem;
-            font-family: var(--font-family-ko);
             font-size: var(--font-large);
             font-weight: 700;
-            color: var(--color-black);
+            color: #323842;
         }
         .desc{
             margin-bottom: 3rem;
@@ -213,7 +223,7 @@
         }
         .link{
             font-family: var(--font-family-en-2);
-            font-size: 2rem;
+            font-size: var(--font-medium);
             font-weight: 700;
             color: var(--color-black);
             letter-spacing: .2rem;
@@ -221,6 +231,28 @@
     }
 }
 
+.porject-swiper .swiper-wrapper .swiper-slide .img-wrap:hover {
+    background-position: center;
+    box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.2);
+}
+
+.porject-swiper .swiper-wrapper .swiper-slide:nth-child(1) .img-wrap{
+    background-image: url(../img/kounosoft.png);
+}
+
+.porject-swiper .swiper-wrapper .swiper-slide:nth-child(2) .img-wrap{
+    background-image: url(../img/dbins.png);
+}
+
+.porject-swiper .swiper-wrapper .swiper-slide:nth-child(3) .img-wrap{
+    background-image: url(../img/rents.png);
+}
+
+.porject-swiper .swiper-wrapper .swiper-slide:nth-child(4) .img-wrap{
+    background-image: url(../img/coex.png);
+}
+
+/* seciton - contact */
 .section.contact{
     text-align: center;
     .desc {
@@ -234,20 +266,118 @@
             font-family: var(--font-family-en);
             color: var(--color-gray-5);
             text-decoration: underline;
-            // text-underline-offset: 1.6rem;
         }
     }
 }
 
+/* footer */
 .footer{
     padding: 4rem 0;
     text-align: center;
     background-color: var(--color-gray-5);
     .copy{
         color: var(--color-gray-3);
-        font-family: var(--font-family-ko);
         font-size: var(--font-small);
         font-weight: 500;
     }
     
 }
+
+
+//반응형
+@media (max-width: 1440px) {
+    .header,
+    .container .section{
+        max-width: 128rem;
+    }
+    .container .section + .section{
+        padding: 13rem 0rem;
+    }
+    .section.project{
+        height: auto;
+    }
+}
+
+/* max-width: 1280px */
+@media (max-width: 1280px) {
+    .header,
+    .container .section{
+        max-width: 119rem;
+    }
+    .porject-swiper .swiper-slide .img-wrap{
+        width: 53rem;
+        height: 69rem;
+    }
+    .section.visual .img-wrap{
+        width: 55.8rem;
+        height: 74.4rem;
+    }
+    .section.visual .title-wrap{
+        width: 43%;
+    }
+}
+
+/* max-width: 1024px */
+@media (max-width: 1024px) {
+    .header,
+    .container .section{
+        max-width: 92rem;
+    }
+
+    .container .section + .section{
+        padding: 8rem 0rem;
+    }
+    .container .section .title{
+        font-size: 6rem;
+    }
+    .section.visual{
+        height: 65.4rem;
+    }
+
+    .section.visual .img-wrap{
+        width: 46.8rem;
+        height: 62.4rem;
+    }
+
+    .section.visual .img-wrap .img-box{
+        right: calc(100% - 8rem);
+    }
+
+    .section.visual .img-wrap .img-box .one{
+        width: 16rem;
+        height: 16rem;
+    }
+
+    .section.visual .title-wrap .desc{
+        font-size: var(--font-small);
+    }
+    .section.skills .skills-list{
+        gap: 1.2rem;
+    }
+
+    .section.skills .skills-list li{
+        font-size: 2.6rem;
+    }
+
+    .porject-swiper .swiper-slide .img-wrap{
+        width: 44rem;
+        height: 64rem;
+    }
+
+    .section.contact .desc{
+        font-size: 4.8rem;
+    }
+
+    .porject-swiper .text-wrap .tit{
+        font-size: 2.6rem;
+    }
+}
+
+/* max-width: 768px */
+@media (max-width: 768px) {
+}
+
+/* max-width: 576px */
+@media (max-width: 576) {
+}
+
