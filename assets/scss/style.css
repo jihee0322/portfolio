@@ -73,12 +73,12 @@
   font-size: var(--font-medium);
   padding-right: 3rem;
 }
-.section.visual .img-wrap {
-  position: absolute;
-  width: 58.8rem;
-  height: 78.4rem;
-  right: 0;
-  background: url(../img/title-img.png) no-repeat center/cover;
+.section.visual .img-wrap video {
+  width: 588px;
+  height: 784px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0 0 297px 297px;
 }
 .section.visual .img-wrap .img-box {
   position: absolute;

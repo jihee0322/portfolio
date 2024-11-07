@@ -93,12 +93,17 @@
     }
 
     .img-wrap {
-        position: absolute;
-        width: 58.8rem;
-        height: 78.4rem;
-        right: 0;
-        @include bg('title-img.png');
-
+        // position: absolute;
+        // width: 58.8rem;
+        // height: 78.4rem;
+        // right: 0;
+        //@include bg('title-img.png');
+        video {
+            width: 588px;
+            height: 784px;
+            object-fit: cover;
+            border-radius: 0 0 297px 297px;
+        }
         .img-box {
             position: absolute;
             bottom: 16.8rem;
