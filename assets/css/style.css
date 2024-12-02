@@ -1,3 +1,6 @@
+.container {
+  padding: 0 8rem;
+}
 .container .section {
   padding: 15rem 0;
   max-width: var(--content-width);
@@ -14,10 +17,9 @@
 
 .header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   margin: 0 auto;
-  max-width: var(--content-width);
+  align-items: center;
+  max-width: 176rem;
   height: 10rem;
 }
 .header .logo {
@@ -34,20 +36,24 @@
   font-size: var(--font-large);
   color: var(--color-gray-0);
 }
-.header .nav-wrap {
-  display: flex;
+.header nav {
+  margin-left: auto;
 }
-.header .nav-wrap li {
+.header nav .nav-wrap {
+  display: flex;
+  margin-left: auto;
+}
+.header nav .nav-wrap li {
   margin-left: 6rem;
 }
-.header .nav-wrap li a {
+.header nav .nav-wrap li a {
   font-family: "Abril Fatface";
   src: url("../font/abril-fatface.woff") format("woff");
   font-weight: 400;
   font-size: 2.8rem;
   color: var(--color-black);
 }
-.header .nav-wrap li:hover {
+.header nav .nav-wrap li:hover {
   transform: rotate(-8deg);
 }
 
@@ -71,14 +77,16 @@
 }
 .section.visual .title-wrap .desc {
   font-size: var(--font-medium);
-  padding-right: 3rem;
+  padding-right: 5rem;
+  line-height: 1.5;
 }
 .section.visual .img-wrap {
   position: absolute;
   width: 58.8rem;
   height: 78.4rem;
   right: 0;
-  background: url(../img/title-img.png) no-repeat center/cover;
+  background: url(../img/visual_4.jpg) no-repeat center/cover;
+  border-radius: 0 0 30rem 30rem;
 }
 .section.visual .img-wrap .img-box {
   position: absolute;
@@ -143,13 +151,13 @@
   max-width: var(--content-width);
   margin: 0 auto;
 }
-.section.project .inner .porject-swiper {
+.section.project .inner .project-swiper {
   height: auto;
 }
-.section.project .inner .porject-swiper .swiper-wrapper {
+.section.project .inner .project-swiper .swiper-wrapper {
   padding-bottom: 6rem;
 }
-.section.project .inner .porject-swiper .swiper-wrapper .swiper-pagination {
+.section.project .inner .project-swiper .swiper-wrapper .swiper-pagination {
   position: absolute;
   bottom: 0;
 }
@@ -159,14 +167,14 @@
   height: 100%;
 }
 
-.porject-swiper .swiper-slide {
+.project-swiper .swiper-slide {
   flex-shrink: 1;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
 }
-.porject-swiper .swiper-slide .img-wrap {
+.project-swiper .swiper-slide .img-wrap {
   width: 58rem;
   height: 74rem;
   background-repeat: no-repeat;
@@ -176,22 +184,24 @@
   transition: all 0.5s 0s;
   cursor: pointer;
   background-color: #DEE1E6;
+  border-radius: 0.8rem;
+  border: 1px solid #eee;
 }
-.porject-swiper .text-wrap {
+.project-swiper .text-wrap {
   padding: 3rem 0 0;
   width: 100%;
 }
-.porject-swiper .text-wrap .tit {
+.project-swiper .text-wrap .tit {
   margin-bottom: 2rem;
   font-size: var(--font-large);
   font-weight: 700;
   color: #323842;
 }
-.porject-swiper .text-wrap .desc {
+.project-swiper .text-wrap .desc {
   margin-bottom: 3rem;
   font-size: var(--font-small);
 }
-.porject-swiper .text-wrap .link {
+.project-swiper .text-wrap .link {
   font-family: var(--font-family-en-2);
   font-size: var(--font-medium);
   font-weight: 700;
@@ -199,24 +209,24 @@
   letter-spacing: 0.2rem;
 }
 
-.porject-swiper .swiper-wrapper .swiper-slide .img-wrap:hover {
+.project-swiper .swiper-wrapper .swiper-slide .img-wrap:hover {
   background-position: center;
   box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.2);
 }
 
-.porject-swiper .swiper-wrapper .swiper-slide:nth-child(1) .img-wrap {
+.project-swiper .swiper-wrapper .swiper-slide:nth-child(1) .img-wrap {
   background-image: url(../img/kounosoft.png);
 }
 
-.porject-swiper .swiper-wrapper .swiper-slide:nth-child(2) .img-wrap {
+.project-swiper .swiper-wrapper .swiper-slide:nth-child(2) .img-wrap {
   background-image: url(../img/dbins.png);
 }
 
-.porject-swiper .swiper-wrapper .swiper-slide:nth-child(3) .img-wrap {
+.project-swiper .swiper-wrapper .swiper-slide:nth-child(3) .img-wrap {
   background-image: url(../img/rents.png);
 }
 
-.porject-swiper .swiper-wrapper .swiper-slide:nth-child(4) .img-wrap {
+.project-swiper .swiper-wrapper .swiper-slide:nth-child(4) .img-wrap {
   background-image: url(../img/coex.png);
 }
 
@@ -268,7 +278,7 @@
   .container .section {
     max-width: 119rem;
   }
-  .porject-swiper .swiper-slide .img-wrap {
+  .project-swiper .swiper-slide .img-wrap {
     width: 53rem;
     height: 69rem;
   }
@@ -315,14 +325,14 @@
   .section.skills .skills-list li {
     font-size: 2.6rem;
   }
-  .porject-swiper .swiper-slide .img-wrap {
+  .project-swiper .swiper-slide .img-wrap {
     width: 44rem;
     height: 64rem;
   }
   .section.contact .desc {
     font-size: 4.8rem;
   }
-  .porject-swiper .text-wrap .tit {
+  .project-swiper .text-wrap .tit {
     font-size: 2.6rem;
   }
 }
